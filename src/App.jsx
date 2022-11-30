@@ -1,13 +1,13 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
+import { useState } from "react";
+import reactLogo from "./assets/react.svg";
+import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0)
-  const [item, setItem] = useState(0)
+  const [count, setCount] = useState(0);
+  const [item, setItem] = useState(0);
   const handleItem = () => {
-    setItem(prev => prev + 1)
-  }
+    setItem((prev) => prev + 1);
+  };
 
   return (
     <div className="App">
@@ -24,7 +24,9 @@ function App() {
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
         </button>
-        <button onClick={handleItem}>Click here{item}</button>
+        <button onClick={handleItem} style={{ marginLeft: "2rem" }}>
+          Click here{item}
+        </button>
         <p>
           Edit <code>src/App.jsx</code> and save to test HMR
         </p>
@@ -33,7 +35,7 @@ function App() {
         Click on the Vite and React logos to learn more
       </p>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
